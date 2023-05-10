@@ -1,0 +1,131 @@
+body {
+    background-color:#F1F1F1
+;
+}
+
+h1 {
+    color:#339966;
+    background-color:#F1F1F1;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Times New Roman";
+}
+
+h2 {
+    color:#000000;
+    background-color:#F1F1F1;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+
+h3, h4, h5, h6 {
+    color:#6AB187;
+    background-color:#F1F1F1;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+
+Button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #f8eb00;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+  float: right;
+  }
+
+
+.ranks_box {
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 2px 2px 2px lightgrey;
+    vertical-align:middle;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #6AB187;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 30px;
+    margin: 30px;
+    background-color: #f9f9f9;
+    border: 2px solid #6AB187;
+    vertical-align:middle;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.map {
+    border: 2px solid #6AB187;
+    border-radius: 15px;
+    vertical-align:middle;
+    position:relative;
+    padding: 20px;
+    align-items: center;
+    margin: 40px;
+}
+
+.row1back {
+    background-color:#f9f9f9;
+    border: 2px solid #6AB187;
+    border-radius: 15px;
+    vertical-align:middle;
+    position:relative;
+    padding: 0px;
+    align-items: center;
+    margin: 40px;
+}
+
+.row2back {
+    background-color:#A5D8DD;
+    border: 2px solid #A5D8DD;
+    border-radius: 15px;
+    vertical-align:middle;
+    position:relative;
+    padding: 0px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    margin: 40px;
+}
+
+.lastrow {
+    background-color:#A5D8DD;
+    border: 2px solid #A5D8DD;
+    border-radius: 15px;
+    vertical-align:middle;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    margin: 40px;
+}
+
+.slider {
+    margin: 0%;
+    background: darkseagreen;
+    display: flex;
+    position:relative;
+    align-items: center;
+    justify-content: center;
+}
+
