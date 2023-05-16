@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import pandas as pd
 import openpyxl
-import gunicorn
+
 
 
 # Read Data
@@ -95,6 +95,8 @@ dropdown_influences = dcc.Dropdown(
 # THE APP ITSELF
 
 app = dash.Dash(__name__)
+
+server = app.server
 
 app.layout = html.Div((
 
