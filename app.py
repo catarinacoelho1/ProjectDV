@@ -285,17 +285,15 @@ def plots(year):
     }
 
     df_scatter = df_scatter[df_scatter['Country'].isin(color_map.keys())]
-    df_scatter['Color'] = df_scatter['Country'].map(color_map)
 
     x_scatter = df_scatter['Productivity per hour worked']
     y_scatter = df_scatter['Annual working hours per worker']
 
     fig = px.scatter(df_scatter,
-                     x=x_scatter, y=y_scatter, trendline="ols",
+                     x=x_scatter, y=y_scatter,
                      animation_group='Country', text='Country',
-                     #color='Country',
-                     color_discrete_map=color_map,
-                     trendline_color_override='green'
+                     color='Country',
+                     color_discrete_map=color_map
                      )
 
     fig.update_layout(
@@ -303,6 +301,8 @@ def plots(year):
         xaxis=dict(showgrid=False),
         yaxis=dict(showgrid=False)
     )
+    
+    fig.update_traces(marker=dict(size=15))
 
     return fig
 
@@ -375,8 +375,8 @@ def barchart(year, indicator):
 
   fig_box.update_layout(
       plot_bgcolor='white',
-      xaxis=dict(showgrid=False),
-      yaxis=dict(showgrid=False)
+      xaxis=dict(showgrid=False, title = "Countries", categoryorder='total descending'),
+      yaxis=dict(showgrid=False, title = indicator)
   )
 
 
