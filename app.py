@@ -1,3 +1,4 @@
+
 import dash
 from dash import dcc
 from dash import html
@@ -148,8 +149,7 @@ app.layout = html.Div((
                 'In fact, countries with the lowest annual working hours tend to have higher productivity, indicating a '
                 'better performance at work. Countries like Germany, Denmark and Norway are known for providing good '
                 'working environments, while "poorer" countries such as Portugal and Greece may have less favorable '
-                'working conditions. This information is clearly displayed on the plot.',
-                style={'padding-left': '20px', 'max-width': '60%', 'white-space': 'pre-wrap', 'align-self': 'center'}),
+                'working conditions. This information is clearly displayed on the plot.', className='six columns'),
             dcc.Graph(id='line_graph'),
         ], id='Graph1', style={'width': '70%', 'padding-right': '15%', 'padding-left': '15%', 'height': '10%'}),
     ], id='2nd row', className='row2back'),
@@ -301,7 +301,7 @@ def plots(year):
         xaxis=dict(showgrid=False),
         yaxis=dict(showgrid=False)
     )
-    
+
     fig.update_traces(marker=dict(size=15))
 
     return fig
@@ -370,7 +370,9 @@ def barchart(year, indicator):
   names = df_box['Country']
   values = df_box[indicator]
 
-  fig_box = px.bar(df_box, x=names, y=values,  color=values,
+  df_box1 = df_box.sort_values(indicator, ascending=False)
+
+  fig_box = px.bar(df_box1, x=names, y=values, color=values,
                  color_continuous_scale='YlGnBu')
 
   fig_box.update_layout(
@@ -573,11 +575,11 @@ def indicator2(country, year):
 
     return str(year) + ' ' + str(factors[0]) + ' of ' + str(country) + ': ' + str(value_1), \
            str(year) + ' ' + str(factors[1]) + ' of ' + str(country) + ': ' + str(value_2), \
-           ' Relationship between weekly working hours and productivity at work ',\
-           ' What are the countries with the highest number of records of mental illnesses? \n ' \
+           str(year) + ' Relationship between weekly working hours and productivity at work ',\
+           str(year) + ' What are the countries with the highest number of records of mental illnesses? \n ' \
            'Are they the ones where people work more hours per year? ', \
            str(year) + ' What factors influence productivity at work? ', \
-           ' Compare the time spent in others activities besides work of two Countries in ' + str(year), \
+           ' Compare the time spent (min per day) in others activities besides work of two Countries in ' + str(year), \
 
 
 if __name__ == '__main__':
