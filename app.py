@@ -179,7 +179,8 @@ app.layout = html.Div((
         html.Div([
             html.Div([
                 dcc.Graph(id='box_graph'),
-            ], style={'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'left'}),
+            ], style={'display': 'flex', 'width': '100%', 'padding-right': '0%', 'padding-left': '0%'}),
+          #'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'left'
             html.Div([
                 dcc.Graph(id='cor_graph'),
             ], style={'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'right'})
@@ -411,7 +412,7 @@ def box_graph_function(year, indicator):
     y_box = df_box[indicator]
 
     fig_box = px.scatter(df_box, x=x_box, y=y_box, 
-                         animation_group='Country', text="Country",
+                         animation_group='Country', text="Country", trendline = "OLS"
                          marginal_x='box', marginal_y='box', template="simple_white",
                          color_discrete_sequence=["#4CB5F5"]
                          )
