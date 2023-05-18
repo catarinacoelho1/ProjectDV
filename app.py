@@ -394,7 +394,6 @@ def barchart(year, indicator):
     Input('dropdown_influence', 'value')
 )
 def box_graph_function(year, indicator):
-    df_box = df[(df['Year'] <= 2019)]
 
     df_box = df_box[df_box['Year'] == year]
     df_box = df_box.loc[
@@ -422,7 +421,7 @@ def box_graph_function(year, indicator):
     fig_box.update_layout(title={
         'text': "Relationship between working hours and a chosen Indicator", 'x': 0.45, 'y': 0.97,
         'xanchor': 'center', 'yanchor': 'top'},
-         margin={'l': 40, 'b': 40, 't': 30, 'r': 0}, hovermode='closest',       
+         margin={'l': 40, 'b': 40, 't': 30, 'r': 0},      
          paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', titlefont=dict(color='black'),
          xaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')),
          yaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')),
