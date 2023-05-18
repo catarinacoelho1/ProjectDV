@@ -412,21 +412,21 @@ def box_graph_function(year, indicator):
     y_box = df_box[indicator]
 
     fig_box = px.scatter(df_box, x=x_box, y=y_box, trendline="ols",
-                         animation_group='Country', text="Country", animation_frame='Year',
+                         animation_group='Country', text="Country",
                          marginal_x='box', marginal_y='box', template="simple_white",
                          color_discrete_sequence=["#4CB5F5"]
                          )
 
-    fig_box.update_layout(legend=dict(orientation="h", xanchor='center', x=0.8, yanchor='top', y=-0.4))
+    #fig_box.update_layout(legend=dict(orientation="h", xanchor='center', x=0.8, yanchor='top', y=-0.4))
 
     fig_box.update_layout(title={
         'text': "Relationship between working hours and a chosen Indicator", 'x': 0.45, 'y': 0.97,
         'xanchor': 'center', 'yanchor': 'top'},
-        margin={'l': 40, 'b': 40, 't': 30, 'r': 0}, hovermode='closest',
-                          paper_bgcolor='rgba(0,0,0,0)',
-                          plot_bgcolor='rgba(0,0,0,0)', titlefont=dict(color='black'),
-        xaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')),
-         yaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')))
+         margin={'l': 40, 'b': 40, 't': 30, 'r': 0}, hovermode='closest',       
+         paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)', titlefont=dict(color='black'),
+         xaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')),
+         yaxis=dict(titlefont=dict(color='black'), tickfont=dict(color='black')),
+         legend=dict(orientation="h", xanchor='center', x=0.8, yanchor='top', y=-0.4))
     
     fig_box.update_traces(marker=dict(size=7.5))
 
