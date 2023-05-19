@@ -353,7 +353,8 @@ def map(year, continent):
 
 def barchart(year, indicator):
 
-  df_box = df[(df['Year'] <= 2021)]
+  #df_box = df[(df['Year'] <= 2021)]
+  df_box = df
 
   df_box = df_box[df_box['Year'] == year]
   df_box = df_box.loc[
@@ -395,7 +396,7 @@ def barchart(year, indicator):
     Input('dropdown_influence', 'value')
 )
 def box_graph_function(year, indicator):
-
+    df_box = df
     df_box = df_box[df_box['Year'] == year]
     df_box = df_box.loc[
         (df_box['Country'] == 'Portugal') | (
