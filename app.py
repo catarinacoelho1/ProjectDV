@@ -413,7 +413,7 @@ def box_graph_function(year, indicator):
     y_box = df_box[indicator]
 
     fig_box = px.scatter(df_box, x=x_box, y=y_box, 
-                         animation_group='Country', text="Country", trendline = "OLS",
+                         animation_group='Country', text="Country", trendline = "ols",
                          marginal_x='box', marginal_y='box', template="simple_white",
                          color_discrete_sequence=["#4CB5F5"]
                          )
