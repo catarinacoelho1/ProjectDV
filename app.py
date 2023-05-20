@@ -288,7 +288,7 @@ def plots(year):
     df_scatter = df_scatter[df_scatter['Country'].isin(color_map.keys())]
 
     x_scatter = df_scatter['Productivity per hour worked']
-    y_scatter = df_scatter['Annual working hours per worker']
+    y_scatter = df_scatter['Annual working hours per worker']/52
 
     fig = px.scatter(df_scatter,
                      x=x_scatter, y=y_scatter,
@@ -300,7 +300,7 @@ def plots(year):
     fig.update_layout(
         plot_bgcolor='white',
         xaxis=dict(showgrid=False),
-        yaxis=dict(showgrid=False)
+        yaxis=dict(showgrid=False, title = "Weekly working hours per worker")
     )
 
     fig.update_traces(marker=dict(size=15))
