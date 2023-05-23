@@ -22,7 +22,7 @@ df = df.loc[(df['Year'] >= 2010) & (df['Year'] <= 2019)]
 # Interactive Components
 
 country_options = ['Portugal', 'Spain', 'Greece', 'Germany', 'Finland', 'Italy', 'Denmark', 'Austria',
-                   'France', 'Norway', 'Poland','Belgium', 'Luxembourg', 'Sweden', 'Switzerland']
+                   'France', 'Norway', 'Poland','Belgium', 'Luxembourg', 'Sweden']
 
 mental_indicators = ['Mental disorders', '% Anxiety disorders', '% Depressive disorders',
                      '%HappyPeople', 'Life satisfaction']
