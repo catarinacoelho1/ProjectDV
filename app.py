@@ -179,8 +179,7 @@ app.layout = html.Div((
         html.Div([
             html.Div([
                 dcc.Graph(id='box_graph'),
-            ], style={'display': 'flex', 'width': '100%', 'padding-right': '0%', 'padding-left': '0%'}),
-          #'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'left'
+            ], style={'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'left'}),
             html.Div([
                 dcc.Graph(id='cor_graph'),
             ], style={'width': '50%', 'padding-right': '1%', 'padding-left': '1%', 'float': 'right'})
