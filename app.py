@@ -237,7 +237,8 @@ app.layout = html.Div((
         html.Div([
             html.H6("Sources"),
             dcc.Markdown(
-                """Dash Enterprise App Gallery: https://dash.gallery/Portal/ \n  \n DataSource https://ourworldindata.org/""",
+                """Dash Enterprise App Gallery: https://dash.gallery/Portal/ \n  
+                \n DataSources: https://ourworldindata.org/   https://www.oecd.org/   https://www.worldbank.org/en/home  """,
                 style={"text-align": "center", "font-size": "13pt", "white-space": "pre", 'padding-right': '25%',
                        'padding-left': '25%'}),
         ]),
